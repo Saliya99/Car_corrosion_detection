@@ -1,0 +1,148 @@
+/* Reset margin and padding for the body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body should take full height */
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;  /* Stack header and content vertically */
+}
+
+/* App container should take full height */
+.App {
+  display: flex;
+  flex-direction: column; /* Stack header and content vertically */
+  align-items: center;
+  justify-content: flex-start; /* Align items from the top */
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Header Styling */
+.app-header {
+  background-color: #007bff;  /* Set the background color of the header */
+  color: white;  /* Text color for the header */
+  width: 100%;  /* Full width */
+  text-align: center; /* Center the text */
+  padding: 20px 0; /* Add some padding to the top and bottom */
+  margin-bottom: 30px; /* Space below the header */
+}
+
+.app-header h1 {
+  font-size: 2.5rem; /* Adjust the font size */
+}
+
+/* Content area centered horizontally and vertically */
+.content {
+  text-align: center;
+  width: 100%;
+  max-width: 600px; /* Limit max width for content */
+  padding: 0 20px; /* Optional padding on sides */
+  margin-top: 20px; /* Space between header and content */
+}
+
+/* Scanner container to center the scanner box in the body */
+.scanner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full height to center the content vertically */
+  flex-grow: 1; /* Take up remaining space */
+  margin-top: 20px; /* Space from the header */
+}
+
+/* Scanner box (centered and with a border) */
+.scanner-box {
+  border: 2px solid #ccc;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  max-width: 400px; /* Adjust width of scanner box */
+}
+
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the custom file upload button */
+.custom-file-upload {
+  display: inline-block;
+  padding: 15px 20px; /* Increase padding for a larger button */
+  font-size: 1.2rem; /* Increase font size */
+  border-radius: 8px; /* Make corners more rounded */
+  border: 2px solid #ccc; /* Slightly thicker border */
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 100%; /* Make the button take full width */
+  max-width: 400px; /* Set a max width */
+  text-align: center; /* Center text */
+}
+
+.custom-file-upload:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Style for file upload message and corrosion type */
+p {
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Modal (Popup) Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  background-color: #081C20;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-button:hover {
+  background-color: #053A40;
+}
